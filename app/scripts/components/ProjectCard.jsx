@@ -53,19 +53,18 @@ var ProjectCard = React.createClass({
       <Card
         initiallyExpanded={project.showcase}
         key={project.title}
+        className="card"
         style={ project.mobile ?
                 {
                   backgroundColor: project.color,
                   color: project.textColor,
                   margin: 6,
-                  width: 400
                 }
                 :
                 {
                   backgroundColor: project.color,
                   color: project.textColor,
                   margin: 6,
-                  width: 400
                 }
             }
       >
@@ -86,6 +85,10 @@ var ProjectCard = React.createClass({
 
 
 
+            <CardActions actAsExpander={true}  >
+              <FlatButton style={{color: project.textColor}} label="Demo" href={project.demo} />
+              <FlatButton style={{color: project.textColor}} label="Github" href={project.code}/>
+            </CardActions>
 
         <CardMedia
           expandable={true}
@@ -103,7 +106,11 @@ var ProjectCard = React.createClass({
         <CardText expandable={true} >
           <List style={{color: project.textColor}}>
 
-            <ListItem style={{color: project.textColor}} primaryText="built with"/>
+            <ListItem
+              style={{color: project.textColor}}
+              primaryText="built with"
+              initiallyOpen={true}
+              autoGenerateNestedIndicator={false}/>
             {tools}
 
 { /*
@@ -116,10 +123,6 @@ var ProjectCard = React.createClass({
 
 
 
-      <CardActions actAsExpander={true}  >
-        <FlatButton style={{color: project.textColor}} label="Demo" href={project.demo} />
-        <FlatButton style={{color: project.textColor}} label="Github" href={project.code}/>
-      </CardActions>
 
 
 

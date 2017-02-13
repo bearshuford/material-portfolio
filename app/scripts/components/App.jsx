@@ -9,7 +9,7 @@ import ProjectCard from './ProjectCard.jsx';
 
 import projects from './../projects.js';
 
-import {grey900} from 'material-ui/styles/colors';
+import {grey900, grey500, grey300} from 'material-ui/styles/colors';
 
 
 
@@ -26,8 +26,14 @@ const styles = {
     width: '100%',
     height: 240
   },
-  app: {
-    paddingTop: 8
+  hero: {
+    backgroundColor: grey500,
+    width: '100%',
+    height: 240
+  },
+  showcase: {
+    paddingTop: 8,
+    pargin: '0 4px',
   }
 }
 
@@ -49,9 +55,11 @@ var App = React.createClass({
             zDepth={0}
             showMenuIconButton={false}
           />
-        <div style={styles.header}/>
+          <div style={styles.header}/>
+          {/* <div style={styles.hero}/> */}
+
           <Masonry
-            style={styles.app}
+            style={styles.showcase}
             options={{transitionDuration:0}}
             enableResizableChildren={true}
             >

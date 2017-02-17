@@ -76,7 +76,6 @@ var App = React.createClass({
         <div style={styles.header}>
           <Avatar
             style={{margin: '0px 24px 0'}}
-            className="circles"
             src="images/headshot.jpg"
             size={200}/>
           <div style={{color: 'white', margin: '0px 12px 20px', display: 'flex', flexFlow: 'column nowrap'}}>
@@ -84,7 +83,7 @@ var App = React.createClass({
             <div>front-end web engineer</div>
           </div>
         </div>
-          <div style={styles.hero}></div>
+          {/*<div style={styles.hero}></div>*/}
           {/*<div
             className="text-headline"
             style={{padding: '18px 18px 8px'}}

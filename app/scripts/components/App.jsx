@@ -9,7 +9,7 @@ import {grey900, grey500, grey300, grey50, grey600} from 'material-ui/styles/col
 
 import Theme from './theme.jsx';
 import ProjectCard from './ProjectCard.jsx';
-import projects from './../projects.js';
+import projects from './../projects.jsx';
 
 
 

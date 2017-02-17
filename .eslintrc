@@ -65,7 +65,6 @@
     "env": {
         "es6": true,
         "browser": true
-        "modules": true
     },
     "parserOptions": {
         "sourceType": "module"

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Router, Route, IndexRedirect, IndexRoute } from 'react-router'
-import { createHashHistory } from 'history';
 import { render } from 'react-dom';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -12,12 +10,4 @@ injectTapEventPlugin();
 
 import App from './components/App.jsx';
 
-
-const history = new createHashHistory();
-
-render((
-  <Router history={history}>
-    <Route path="/" component={App}>
-    </Route>
-  </Router>
-), document.getElementById('root'));
+render(<App/>, document.getElementById('root'));

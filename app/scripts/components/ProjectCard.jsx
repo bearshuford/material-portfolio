@@ -1,32 +1,93 @@
 import React from 'react';
 
 
+import SwipeableViews from 'react-swipeable-views';
 
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText,
-        FlatButton, List, ListItem, Subheader, Divider, SvgIcon} from 'material-ui';
+import {Avatar, Card, CardActions, CardHeader, CardMedia, CardTitle, CardText,
+        FlatButton, List, ListItem, Subheader, Divider, SvgIcon,
+        Tabs, Tab} from 'material-ui';
 
-import {pink400, blue700, blue800, greenA700} from 'material-ui/styles/colors';
+import {pink400, blue700, blue800, greenA700, grey800} from 'material-ui/styles/colors';
 
 
 
 
 
 const styles = {
-
-
-}
+  headline: {
+    fontSize: 24,
+    paddingTop: 16,
+    marginBottom: 12,
+    fontWeight: 400,
+  },
+  slide: {
+    padding: 10,
+  }
+};
 
 const ExpandIcon = (props) => (
   <SvgIcon {...props}>
-     <path fill={props.color} d="M10,21V19H6.41L10.91,14.5L9.5,13.09L5,17.59V14H3V21H10M14.5,10.91L19,6.41V10H21V3H14V5H17.59L13.09,9.5L14.5,10.91Z" />
+    <path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
   </SvgIcon>
 );
 
 const CompressIcon = (props) => (
   <SvgIcon {...props}>
-     <path d="M19.5,3.09L15,7.59V4H13V11H20V9H16.41L20.91,4.5L19.5,3.09M4,13V15H7.59L3.09,19.5L4.5,20.91L9,16.41V20H11V13H4Z" />
+    <path d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
   </SvgIcon>
 );
+
+
+
+
+var CardTabs  = React.createClass({
+
+  getInitialState: function() {
+    return {slideIndex: 0};
+  },
+
+  handleChange: function(value) {
+    this.setState({slideIndex: value});
+  },
+
+  render: function() {
+    var project = this.props.project;
+    return (
+      <div>
+       <Tabs
+         onChange={this.handleChange}
+         value={this.state.slideIndex}
+         inkBarStyle={{backgroundColor:project.textColor}}
+       >
+         <Tab style={{backgroundColor:project.color, color:project.textColor}} label="About" value={0} />
+         <Tab style={{backgroundColor:project.color, color:project.textColor}} label="Built With" value={1} />
+       </Tabs>
+       <SwipeableViews
+         index={this.state.slideIndex}
+         onChangeIndex={this.handleChange}
+         style={{margin: 6}}
+       >
+
+
+         <div style={{padding:16, color: project.textColor}}>
+           {this.props.info.map(function(paragraph, i){
+             return <p key={i}>{paragraph}</p>;
+           })}
+         </div>
+
+         <div>
+           {this.props.tools}
+         </div>
+
+
+       </SwipeableViews>
+     </div>
+   );
+  }
+
+});
+
+
 
 
 
@@ -35,14 +96,28 @@ const CompressIcon = (props) => (
 
 var ProjectCard = React.createClass({
 
+  getInitialState: function() {
+    return {
+      expanded: false
+    };
+  },
+
+  handleExpandChange: function(expanded) {
+    this.setState({expanded: expanded});
+  },
+
+
   render: function() {
+
     var project = this.props.project;
+    var info    = project.info;
 
     var tools = project.tools.map(function(tool,i){
       return <ListItem
                 style={{color: project.textColor}}
                 primaryText={tool.label}
                 leftIcon={tool.icon}
+                href={tool.link}
                 key={tool.label + i}
               />;
 
@@ -51,77 +126,77 @@ var ProjectCard = React.createClass({
 
     return (
       <Card
-        initiallyExpanded={project.showcase}
+        expanded={this.state.expanded}
+        onExpandChange={this.handleExpandChange}
         key={project.title}
         className="card"
         style={ project.mobile ?
                 {
                   backgroundColor: project.color,
                   color: project.textColor,
-                  margin: 6,
+                  margin: 6
                 }
                 :
                 {
                   backgroundColor: project.color,
                   color: project.textColor,
-                  margin: 6,
+                  margin: 6
                 }
             }
       >
 
+        <CardHeader
+          title={project.title}
+          titleStyle={{fontSize: 22}}
+          subtitle={project.description}
+          subtitleColor={project.textColor}
+          subtitleStyle={{fontWeight: 300}}
+          titleColor={project.textColor}
+          showExpandableButton={true}
+          closeIcon={<ExpandIcon color={project.textColor}/>}
+          openIcon={<CompressIcon color={project.textColor}/>}
 
+        />
 
+          {!this.state.expanded &&
+            <CardMedia
+              expandable={false}
+              style={{padding: '0px 16px 0px'}}>
+              {
+                project.mobile ?
+                  <img style={{padding: '0px 60px 0'}} src={project.image}/>
+                  : <img src={project.image}/>
+              }
 
-      <CardTitle
-        actAsExpander={true}
-        showExpandableButton={true}
-        title={project.title}
-        subtitle={project.description}
-        subtitleColor={project.textColor}
-        titleColor={project.textColor}
-        closeIcon={<ExpandIcon color={project.textColor}/>}
-        openIcon={<CompressIcon color={project.textColor}/>}
-      />
-
-
-
-            <CardActions actAsExpander={true}  >
-              <FlatButton style={{color: project.textColor}} label="Demo" href={project.demo} />
-              <FlatButton style={{color: project.textColor}} label="Github" href={project.code}/>
-            </CardActions>
-
-        <CardMedia
-          expandable={true}
-          style={{padding: '16px 20px 8px'}}>
-          {
-            project.mobile ?
-              <img style={{padding: '6px 60px 0'}} src={project.image}/>
-              : <img src={project.image}/>
+            </CardMedia>
           }
 
-        </CardMedia>
+
+            <CardText expandable={true} style={{padding:0}}>
+              <CardTabs info={info} tools={tools} project={project}/>
+            </CardText>
 
 
 
-        <CardText expandable={true} >
-          <List style={{color: project.textColor}}>
 
-            <ListItem
-              style={{color: project.textColor}}
-              primaryText="built with"
-              initiallyOpen={true}
-              autoGenerateNestedIndicator={false}/>
-            {tools}
-
-{ /*
-          <ListItem style={{color: project.textColor}}   leftIcon={<SeatGeekIcon color={project.textColor}/>} primaryText="SeatGeek API" />
-          <ListItem style={{color: project.textColor}}   leftIcon={<SpotifyIcon color={project.textColor}/>} primaryText="Spotify API JS" />
-           <ListItem style={{color: project.textColor}}  leftIcon={<ReactIcon color={project.textColor}/>}   primaryText="React"  />
-*/ }
-           </List>
-        </CardText>
+            <CardActions>
+              <FlatButton
+                style={{color: project.textColor}}
+                label="Demo"
+                href={project.demo} />
+              <FlatButton
+                style={{color: project.textColor}}
+                label="Code"
+                href={project.code}/>
+            </CardActions>
 
 
+
+{/*
+      <CardText expandable={true} >
+        {tools}
+      </CardText>
+*/}
 
 
 

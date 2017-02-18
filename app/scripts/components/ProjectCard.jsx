@@ -69,7 +69,7 @@ var CardTabs  = React.createClass({
        >
 
 
-         <div style={{padding:16, color: project.textColor}}>
+         <div style={{padding:'0 16px', color: project.textColor}}>
            {this.props.info.map(function(paragraph, i){
              return <p key={i}>{paragraph}</p>;
            })}
@@ -155,16 +155,17 @@ var ProjectCard = React.createClass({
           showExpandableButton={true}
           closeIcon={<ExpandIcon color={project.textColor}/>}
           openIcon={<CompressIcon color={project.textColor}/>}
-
+  href={project.demo}
         />
 
           {!this.state.expanded &&
             <CardMedia
+                href={project.demo}
               expandable={false}
-              style={{padding: '0px 16px 0px'}}>
+              style={{padding: '0px 16px 16px'}}>
               {
                 project.mobile ?
-                  <img style={{padding: '0px 60px 0'}} src={project.image}/>
+                  <img style={{padding: '0px 15% 0'}} src={project.image}/>
                   : <img src={project.image}/>
               }
 
@@ -179,7 +180,7 @@ var ProjectCard = React.createClass({
 
 
 
-            <CardActions>
+            <CardActions expandable={true}>
               <FlatButton
                 style={{color: project.textColor}}
                 label="Demo"

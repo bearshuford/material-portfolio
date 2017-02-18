@@ -146,28 +146,41 @@ var ProjectCard = React.createClass({
       >
 
         <CardHeader
-          title={project.title}
-          titleStyle={{fontSize: 22}}
-          subtitle={project.description}
-          subtitleColor={project.textColor}
-          subtitleStyle={{fontWeight: 300}}
-          titleColor={project.textColor}
+          title={
+            <a
+              href={project.demo}
+              style={{fontSize:22, color: project.textColor, textDecoration: 'none'}}
+            >
+              {project.title}
+            </a>
+          }
+          subtitle={
+
+            <a
+              href={project.demo}
+              style={{fontWeight:300, color: project.textColor, textDecoration: 'none'}}
+            >
+              {project.description}
+            </a>
+          }
+
           showExpandableButton={true}
           closeIcon={<ExpandIcon color={project.textColor}/>}
           openIcon={<CompressIcon color={project.textColor}/>}
-  href={project.demo}
+          href={project.demo}
         />
 
           {!this.state.expanded &&
             <CardMedia
-                href={project.demo}
               expandable={false}
               style={{padding: '0px 16px 16px'}}>
-              {
-                project.mobile ?
-                  <img style={{padding: '0px 15% 0'}} src={project.image}/>
-                  : <img src={project.image}/>
-              }
+              <a href={project.demo}>
+                {
+                  project.mobile ?
+                    <img style={{padding: '0px 15% 0'}} src={project.image}/>
+                    : <img src={project.image}/>
+                }
+              </a>
 
             </CardMedia>
           }

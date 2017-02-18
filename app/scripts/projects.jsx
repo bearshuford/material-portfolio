@@ -248,9 +248,9 @@ var projects = [
 {
   heading: 'week 4',
   title:        'Github Profile',
-  description:  're-creation of Github Repos Tab',
+  description:  'github repos tab clone',
   image:        'images/github.png',
-  demo:         'https://bearshuford.github.io/4.4-github-profile/',
+  demo:         'http://github.bear.works',
   code:         'https://github.com/bearshuford/4.4-github-profile',
   color:        amber500,
   textColor:    'black',
@@ -258,8 +258,7 @@ var projects = [
   showcase:     false,
   info: [
     'A github profile app that displays info from the Github API and my repos.',
-    'I was introducted to jQuery AJAX and learned to handle callbacks and asynchronous code',
-    'For the design, I recreated the Github Repos Tab to the best of my ability.'
+    'I was introducted to jQuery AJAX and learned to handle callbacks and asynchronous code'
   ],
   tools: [
     {

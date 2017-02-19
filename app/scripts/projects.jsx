@@ -286,7 +286,7 @@ var projects = [
   title: 'Etsy Search Page',
   description: 'etsy search page re-creation',
   image: 'images/etsy.png',
-  demo: 'https://bearshuford.github.io/etsy-recreation/',
+  demo: 'http://etsy.bear.works',
   code: 'https://github.com/bearshuford/etsy-recreation',
   color: deepPurple500,
   textColor: 'white',

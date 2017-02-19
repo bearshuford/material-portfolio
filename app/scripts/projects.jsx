@@ -320,7 +320,7 @@ var projects = [
   title: 'Vertical Timeline',
   description: 'layout and positioning with CSS',
   image: 'images/timeline.png',
-  demo: 'https://bearshuford.github.io/1.3-timeline-layout/',
+  demo: 'http://timeline.bear.works',
   code: 'https://github.com/bearshuford/1.3-timeline-layout',
   color: teal500,
   textColor: 'white',

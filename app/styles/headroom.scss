@@ -1,0 +1,40 @@
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  // height: 70px;
+}
+.headroom--unfixed {
+  position: relative;
+  .bear-bar{
+    transition: transform 200ms ease-in-out;
+    @media (min-width: 670px) {
+      background-color: transparent !important;
+    }
+
+  }
+  h1{
+    font-weight: 600;
+    // transform: scale(1.2);
+     transition: font-weight 300ms ease-in-out;
+  }
+  transform: translateY(0);
+
+}
+.headroom--scrolled {
+  transition: transform 200ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+    z-index: 4000;
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+  z-index: 4000;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.12)
+
+
+}

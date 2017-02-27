@@ -13,6 +13,7 @@ import {pink400, blue700, blue800, greenA700, grey800} from 'material-ui/styles/
 
 
 
+
 const styles = {
   headline: {
     fontSize: 24,
@@ -155,7 +156,6 @@ var ProjectCard = React.createClass({
             </a>
           }
           subtitle={
-
             <a
               href={project.demo}
               style={{fontWeight:300, color: project.textColor, textDecoration: 'none'}}

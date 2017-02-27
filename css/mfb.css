@@ -82,7 +82,7 @@
   margin: 25px;
   position: fixed;
   white-space: nowrap;
-  z-index: 30;
+  z-index: 4000;
   padding-left: 0;
   list-style: none; }
 
@@ -735,4 +735,5 @@
 /**
  * Apply this class to the html tag when developing the slide-in button
  */
+
 /*# sourceMappingURL=mfb.css.map */

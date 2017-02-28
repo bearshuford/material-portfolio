@@ -33,7 +33,7 @@ var BearMenu = React.createClass({
           onClick={function(e){ console.log(e); e.preventDefault(); }}
           icon="fa fa-linkedin"
           label="LinkedIn"
-          href="https://linkedin.com/" />
+          href="https://linkedin.com/in/bearshuford" />
         <ChildButton
           icon="fa fa-github-alt"
           label="Github"

@@ -46,9 +46,9 @@ const styles = {
     justifyContent:  'center',
     width:           '100%',
     fontSize:        '18px',
-    lineHeight:      '26px',
+    lineHeight:      '28px',
     // textAlign:       'center',
-    padding:         '0px 16px 16px',
+    padding:         '0px 7% 16px',
   },
 
   heroColumn: {
@@ -56,27 +56,11 @@ const styles = {
     paddingBottom: 28
   },
 
-  footer: {
-    display:         'flex',
-    flexflow:        'column nowrap',
-    alignItems:      'center',
-    backgroundColor: grey50,
-    width:           '100%',
-    textAlign:       'center',
-    height:          120
-  },
-
   showcase: {
     background: grey400,
-    padding:    '0 8px 8px'
+    padding:    '0 8px 100px'
   }
 };
-
-
-// const scrollClass = {
-//   down: 'sticky-scroll-down',
-//   up:   'sticky-scroll-up'
-// }
 
 
 var App = React.createClass({
@@ -142,7 +126,11 @@ var App = React.createClass({
           <div style={styles.hero}>
 
             <div style={styles.heroColumn}>
-                {'Currently building '}
+                {"Hi, I'm Bear and I'm looking to be a part of a creative and diverse team of developers. Recently graduated from "}
+                <a className="underline" href="https://www.theironyard.com/locations/greenville.html" >
+                 The Iron Yard
+                </a>,
+                {" I'm currently building "}
                 <a className="underline" href="">
                   bear.works
                 </a>  {/* TODO: display tools used on site */}
@@ -153,18 +141,13 @@ var App = React.createClass({
                 </a> generator
                 to scaffold upcoming projects.
 
-                {' Recently graduated from the '}
-                <a className="underline" href="http://yeoman.io/" >
-                Iron Yard
-                </a>
-                . Below are some of the 30 projects completed over 3 months.
+                Check out some of the projects I've completed below.
                 {/*I like building stuff in the browser, but I'm also interested in learning React Navite or Swift */}
 
-                {' Willing to relocate to be a part of another creative, supportive, diverse team.'}
+
             </div>
 
           </div>
-
 
 
 
@@ -192,13 +175,6 @@ var App = React.createClass({
             </Masonry>
           </div>
 
-
-
-
-
-          <div style={styles.footer}>
-
-          </div>
 
         <BearMenu/>
 

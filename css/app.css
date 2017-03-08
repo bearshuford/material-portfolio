@@ -834,7 +834,7 @@ i.bear-head {
       .headroom--unfixed .bear-bar {
         background-color: transparent !important; } }
   .headroom--unfixed h1 {
-    font-weight: 600;
+    font-weight: 500 !important;
     -webkit-transition: font-weight 300ms ease-in-out;
     transition: font-weight 300ms ease-in-out; }
 
@@ -909,6 +909,9 @@ body {
   margin: 0;
   background-color: #212121;
   font-family: Roboto, sans-serif; }
+
+.bear-icon {
+  width: 32px !important; }
 
 .bear-link {
   text-decoration: none;

@@ -833,10 +833,6 @@ i.bear-head {
     @media (min-width: 670px) {
       .headroom--unfixed .bear-bar {
         background-color: transparent !important; } }
-  .headroom--unfixed h1 {
-    font-weight: 500 !important;
-    -webkit-transition: font-weight 300ms ease-in-out;
-    transition: font-weight 300ms ease-in-out; }
 
 .headroom--scrolled {
   -webkit-transition: -webkit-transform 200ms ease-in-out;
@@ -939,7 +935,7 @@ body {
   content: '';
   left: 0;
   right: 0;
-  width: 92%;
+  width: 94%;
   color: #000;
   background-color: black;
   left: 0;
@@ -993,7 +989,7 @@ body {
             -ms-flex-align: center !important;
                 align-items: center !important;
         text-align: center !important;
-        margin-bottom: 20 !important; } }
+        margin-bottom: 26px !important; } }
     @media (min-width: 880px) {
       .me .basics {
         -webkit-box-align: start !important;

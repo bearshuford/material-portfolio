@@ -16,10 +16,6 @@
     @media (min-width: 670px) {
       .headroom--unfixed .bear-bar {
         background-color: transparent !important; } }
-  .headroom--unfixed h1 {
-    font-weight: 500 !important;
-    -webkit-transition: font-weight 300ms ease-in-out;
-    transition: font-weight 300ms ease-in-out; }
 
 .headroom--scrolled {
   -webkit-transition: -webkit-transform 200ms ease-in-out;

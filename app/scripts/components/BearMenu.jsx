@@ -3,23 +3,75 @@ import React from 'react';
 import {Menu, MainButton, ChildButton} from 'react-mfb';
 
 
-// import Avatar from 'material-ui/Avatar';
-// import { SpeedDial, BubbleList, BubbleListItem } from 'react-speed-dial';
+import Avatar from 'material-ui/Avatar';
+import { SpeedDial, BubbleList, BubbleListItem } from 'react-speed-dial';
+
+import LinkedIn from 'material-ui-community-icons/icons/linkedin';
+import FilePDF from 'material-ui-community-icons/icons/file-pdf';
+
+import MailIcon from 'material-ui/svg-icons/content/mail';
+
+import {BearIcon}   from './icons/misc.jsx';
+import {GithubIcon} from './icons/simple.jsx';
 
 
+
+const brandColors = {
+  github:   '#c9510c',
+  linkedin: '#0077b5',
+  mail:     '#43A047',
+  resume:   '#F06292'
+};
+
+const list = {
+	items: [
+
+		{
+			primaryText: 'Github',
+      href:         'https://github.com/bearshuford',
+			rightAvatar: <Avatar backgroundColor={brandColors.github} icon={<GithubIcon />} />,
+    },
+    {
+      primaryText: 'LinkedIn',
+      href:         'https://linkedin.com/in/bearshuford',
+      rightAvatar: <Avatar backgroundColor={brandColors.linkedin} icon={<LinkedIn />} />,
+    },
+
+    {
+      primaryText: 'Resume',
+      href:         'docs/resume.pdf',
+      rightAvatar: <Avatar backgroundColor={brandColors.resume} icon={<FilePDF />} />,
+  },
+    {
+      primaryText: 'Email',
+      href:         'mailto:bearshuford@me.com',
+      rightAvatar: <Avatar backgroundColor={brandColors.mail} icon={<MailIcon />} />,
+    },
+	],
+};
 
 
 var BearMenu = React.createClass({
 
   render: function() {
 
-    // demo defaults
-    var effect = 'zoomin',
-        pos = 'br',
-        method = 'click';
 
+  return (
+        <SpeedDial
+          hasBackdrop={false}
+          style={{zIndex: 50000, bottom: 13, right: 9, width: 'calc(100% - 9px)'}}
+          icon={<BearIcon className="bear-icon"/>}
+          floatingActionButtonProps={{}}
+        >
+          <BubbleList>
+            {list.items.map((item, index) => {
+    					return (<BubbleListItem key={index} {...item} />);
+    				})}
+          </BubbleList>
+        </SpeedDial>
+        );
+{/*
 
-    return (
       <Menu effect={effect} method={method} position={pos} style={{zIndex:4000}}>
         <MainButton
           iconResting="bear-head"
@@ -43,8 +95,9 @@ var BearMenu = React.createClass({
           label="Resume"
           href="docs/resume.pdf" />
       </Menu>
-    );
-  }
+  */}
+
+}
 
 });
 

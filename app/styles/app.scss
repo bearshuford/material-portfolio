@@ -27,6 +27,11 @@ body {
 }
 
 
+.bear-icon {
+  width: 32px !important;
+}
+
+
 .bear-link {
   text-decoration: none;
   color: white;
@@ -93,7 +98,6 @@ body {
 
 
   @media (max-width: 590px) {
-
     flex-flow: column nowrap;
   }
 

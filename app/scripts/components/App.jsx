@@ -87,15 +87,17 @@ var App = React.createClass({
 
         <div className="me" style={styles.header}>
 
+          <div className="crop">
           <Avatar
             className="headshot"
             style={{margin: '0px 24px 0'}}
             src="images/headshot.jpg"
           />
+        </div>
 
           <div className="basics" style={styles.headerText}>
             <div className="text-display-1" style={{padding:0, margin: '0 0 12px', lineHeight: '44px'}}>
-              front-end <span style={{whiteSpace: 'nowrap'}}> web developer </span>
+              junior front-end <span style={{whiteSpace: 'nowrap'}}> web developer </span>
             </div>
             <div style={{display: 'flex', flexFlow: 'row nowrap', alignItems: 'center'}}>
               <LocationOn color="white" style={{height:20, marginRight: 4}}/>
@@ -126,23 +128,11 @@ var App = React.createClass({
           <div style={styles.hero}>
 
             <div style={styles.heroColumn}>
-                {"Hi, I'm Bear and I'm looking to be a part of a creative and diverse team of developers. Recently graduated from "}
+                {"Hi, I'm Bear and I'm looking to be a part of a creative and diverse team that can use and grow my skill set. Recently graduated from "}
                 <a className="underline" href="https://www.theironyard.com/locations/greenville.html" >
                  The Iron Yard
-                </a>,
-                {" I'm currently building "}
-                <a className="underline" href="">
-                  bear.works
-                </a>  {/* TODO: display tools used on site */}
+               </a>, {"I currently love building in the browser. I'm particularly fond of React and JSX."}
 
-                {'and writing a '}
-                <a className="underline" href="http://yeoman.io/">
-                  Yeoman
-                </a> generator
-                to scaffold upcoming projects.
-
-                Check out some of the projects I've completed below.
-                {/*I like building stuff in the browser, but I'm also interested in learning React Navite or Swift */}
 
 
             </div>

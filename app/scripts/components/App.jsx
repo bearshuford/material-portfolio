@@ -47,7 +47,6 @@ const styles = {
     width:           '100%',
     fontSize:        '18px',
     lineHeight:      '28px',
-    // textAlign:       'center',
     padding:         '0px 7% 16px',
   },
 
@@ -61,6 +60,10 @@ const styles = {
     padding:    '0 8px 100px'
   }
 };
+
+
+
+
 
 
 var App = React.createClass({
@@ -87,17 +90,16 @@ var App = React.createClass({
 
         <div className="me" style={styles.header}>
 
-          <div className="crop">
-          <Avatar
-            className="headshot"
-            style={{margin: '0px 24px 0'}}
-            src="images/headshot.jpg"
-          />
-        </div>
+            <Avatar
+              className="headshot"
+              style={{margin: '0px 24px 0'}}
+              src="images/headshot.jpg"
+            />
 
           <div className="basics" style={styles.headerText}>
             <div className="text-display-1" style={{padding:0, margin: '0 0 12px', lineHeight: '44px'}}>
-              junior front-end <span style={{whiteSpace: 'nowrap'}}> web developer </span>
+              junior front-end
+              <span style={{whiteSpace: 'nowrap'}}> web developer </span>
             </div>
             <div style={{display: 'flex', flexFlow: 'row nowrap', alignItems: 'center'}}>
               <LocationOn color="white" style={{height:20, marginRight: 4}}/>
@@ -107,11 +109,10 @@ var App = React.createClass({
             </div>
           </div>
 
-          </div>
+        </div>
 
 
-        <section id="about">
-                  </section>
+        <section id="about"/>
 
           <Sticky>
             <div className="bottom-b">
@@ -128,12 +129,15 @@ var App = React.createClass({
           <div style={styles.hero}>
 
             <div style={styles.heroColumn}>
-                {"Hi, I'm Bear and I'm looking to be a part of a creative and diverse team that can use and grow my skill set. Recently graduated from "}
-                <a className="underline" href="https://www.theironyard.com/locations/greenville.html" >
-                 The Iron Yard
-               </a>, {"I currently love building in the browser. I'm particularly fond of React and JSX."}
+              {"Hi, I'm Bear and I'm looking to be a part of a creative and diverse team that can use and grow my skill set. Recently graduated from "}
+              <a className="underline" href="https://www.theironyard.com/locations/greenville.html" >
+                The Iron Yard
+              </a>, {"I'm currently learning "}
+              <a className="underline" href="http://redux.js.org/" >
+                Redux
+              </a>.
 
-
+              Check out a few of the projects I completed during the bootcamp below.
 
             </div>
 

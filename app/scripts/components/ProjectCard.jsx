@@ -7,11 +7,7 @@ import {Avatar, Card, CardActions, CardHeader, CardMedia, CardTitle, CardText,
         FlatButton, List, ListItem, Subheader, Divider, SvgIcon,
         Tabs, Tab} from 'material-ui';
 
-import {pink400, blue700, blue800, greenA700, grey800} from 'material-ui/styles/colors';
-
-
-
-
+// import {pink400, blue700, blue800, greenA700, grey800} from 'material-ui/styles/colors';
 
 
 const styles = {

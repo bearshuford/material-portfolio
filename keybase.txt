@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/bearshuford
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://bear.works
+  * I am bearshuford (https://keybase.io/bearshuford) on keybase.
+  * I have a public key ASAwd9Z4P8NAK3tkunIWFzG6kWs9m8MrkH64HjZWwtrskAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01203077d6783fc3402b7b64ba72161731ba916b3d9bc32b907eb81e3656c2daec900a",
+            "host": "keybase.io",
+            "kid": "01203077d6783fc3402b7b64ba72161731ba916b3d9bc32b907eb81e3656c2daec900a",
+            "uid": "d3894565235f143057ac59c86ddaed19",
+            "username": "bearshuford"
+        },
+        "service": {
+            "hostname": "bear.works",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1489898565,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1489898520,
+        "hash": "fc03dd1a6f619a9fdab2b995b92e33b31b9379b3feb08a353b49053695442ff07ccedeff5591f30f8aeb05392ba2aa478e64de027085e9ff8c17ca38c87b47e1",
+        "seqno": 966710
+    },
+    "prev": "4b82745dee7482214b5e0958c8bbe567a23388c72fc7f3aa9e99ed7396206320",
+    "seqno": 23,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgMHfWeD/DQCt7ZLpyFhcxupFrPZvDK5B+uB42VsLa7JAKp3BheWxvYWTFAvV7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMzA3N2Q2NzgzZmMzNDAyYjdiNjRiYTcyMTYxNzMxYmE5MTZiM2Q5YmMzMmI5MDdlYjgxZTM2NTZjMmRhZWM5MDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzA3N2Q2NzgzZmMzNDAyYjdiNjRiYTcyMTYxNzMxYmE5MTZiM2Q5YmMzMmI5MDdlYjgxZTM2NTZjMmRhZWM5MDBhIiwidWlkIjoiZDM4OTQ1NjUyMzVmMTQzMDU3YWM1OWM4NmRkYWVkMTkiLCJ1c2VybmFtZSI6ImJlYXJzaHVmb3JkIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJiZWFyLndvcmtzIiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMCJ9LCJjdGltZSI6MTQ4OTg5ODU2NSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDg5ODk4NTIwLCJoYXNoIjoiZmMwM2RkMWE2ZjYxOWE5ZmRhYjJiOTk1YjkyZTMzYjMxYjkzNzliM2ZlYjA4YTM1M2I0OTA1MzY5NTQ0MmZmMDdjY2VkZWZmNTU5MWYzMGY4YWViMDUzOTJiYTJhYTQ3OGU2NGRlMDI3MDg1ZTlmZjhjMTdjYTM4Yzg3YjQ3ZTEiLCJzZXFubyI6OTY2NzEwfSwicHJldiI6IjRiODI3NDVkZWU3NDgyMjE0YjVlMDk1OGM4YmJlNTY3YTIzMzg4YzcyZmM3ZjNhYTllOTllZDczOTYyMDYzMjAiLCJzZXFubyI6MjMsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAIOt28ujBjXfthvVkeVVMKyyNxP7Qh9Rmx6oaqUV9gTHM6tjRc7ux5MhUwNGzWQJs6pUiw//D8Zc7INuVCwBDBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOxvbc3+OfJ1t+0z1K11V9LpJ1bMJhB5uQxg2u8+Pi77o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bearshuford
+
+==================================================================

@@ -1,14 +1,6 @@
 ## material portfolio
 [bear.works](http://bear.works)
 
-### purpose
-
-
-### design
-
-
-
-
 
 ### built with
 

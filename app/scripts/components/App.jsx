@@ -6,19 +6,19 @@ import Sticky from 'react-sticky-state';
 import Headroom from 'react-headroom';
 import Scrollchor from 'react-scrollchor';
 
-import {AppBar, Avatar, SvgIcon, FlatButton, RaisedButton} from 'material-ui';
+import { AppBar, Avatar, SvgIcon, FlatButton, RaisedButton } from 'material-ui';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import LocationOn from 'material-ui/svg-icons/communication/location-on';
 
-import {grey900, grey400, grey500, grey300, grey50, grey600} from 'material-ui/styles/colors';
+import { grey900, grey400, grey500, grey300, grey50, grey600 } from 'material-ui/styles/colors';
 
 import Theme from './theme.jsx';
 import ProjectCard from './ProjectCard.jsx';
 import projects from './../projects.jsx';
 import BearMenu from './BearMenu.jsx';
 
-import {ReactIcon} from './icons/simple.jsx';
-import {BearIcon, IronYard} from './icons/misc.jsx';
+import { ReactIcon } from './icons/simple.jsx';
+import { BearIcon, IronYard } from './icons/misc.jsx';
 
 
 
@@ -104,7 +104,7 @@ var App = React.createClass({
             <div style={{display: 'flex', flexFlow: 'row nowrap', alignItems: 'center'}}>
               <LocationOn color="white" style={{height:20, marginRight: 4}}/>
               <div style={{fontSize: 16, paddingRight: 6}}>
-                Greenville SC
+                Atlanta GA
               </div>
             </div>
           </div>
@@ -116,46 +116,37 @@ var App = React.createClass({
 
           <Sticky>
             <div className="bottom-b">
-                <AppBar
-                  style={{backgroundColor: grey50, margin: 0}}
-                  titleStyle={{color: 'black'}}
-                  title={<Scrollchor className="nav-links" to="#about">ABOUT</Scrollchor>}
-                  zDepth={0}
-                  showMenuIconButton={false}
-                />
+              <AppBar
+                style={{backgroundColor: grey50, margin: 0}}
+                titleStyle={{color: 'black'}}
+                title={<Scrollchor className="nav-links" to="#about">ABOUT</Scrollchor>}
+                zDepth={0}
+                showMenuIconButton={false}
+              />
             </div>
           </Sticky>
 
           <div style={styles.hero}>
-
             <div style={styles.heroColumn}>
-              {"Hi, I'm Bear and I'm looking to be a part of a creative and diverse team that can use and grow my skill set. Recently graduated from "}
+              {"Hi, I'm Bear and I'm looking to be a part of a creative and diverse team that can use and grow my skill set. I studied computer science at Clemson and web development at "}
               <a className="underline" href="https://www.theironyard.com/locations/greenville.html" >
                 The Iron Yard
-              </a>, {"I'm currently learning "}
-              <a className="underline" href="http://redux.js.org/" >
-                Redux
               </a>.
-
               Check out a few of the projects I completed during the bootcamp below.
-
             </div>
-
           </div>
-
-
 
         <section id="projects"/>
 
           <Sticky>
             <div className="bottom">
-                <AppBar
-                  style={{backgroundColor: grey400}}
-                  titleStyle={{color: 'black'}}
-                  title={<Scrollchor className="nav-links" to="#projects">PROJECTS</Scrollchor>}
-                  zDepth={0}
-                  showMenuIconButton={false}
-                />
+              <AppBar
+                style={{backgroundColor: grey400}}
+                titleStyle={{color: 'black'}}
+                title={<Scrollchor className="nav-links" to="#projects">PROJECTS</Scrollchor>}
+                zDepth={0}
+                showMenuIconButton={false}
+              />
             </div>
           </Sticky>
 
